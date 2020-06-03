@@ -5,15 +5,17 @@
   "main": "index.js",
   "module": "app.js",
   "scripts": {
-    "start": "nodemon index",
+    "start": "NODE_ENV=dev nodemon -r dotenv/config index",
     "lint": "eslint --format table --fix ."
   },
   "private": true,
   "author": "Jonas Allen",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "lodash.merge": "^4.6.2",
     "mongoose": "^5.9.17",
     "nodemon": "^2.0.4"
   },

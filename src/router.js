@@ -1,5 +1,6 @@
 import express from 'express'
 export const router = express.Router()
+import {userRouter} from './resources/users/user.router'
 
 router.get('/', (req, res) => res.send('Home Page'))
 router.get('/about', (req, res) => res.send('About Page'))
@@ -12,3 +13,5 @@ router.post('/signup', (req, res) => {
   const user = { email, password }
   res.send(user)
 })
+
+router.use('/users', userRouter)

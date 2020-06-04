@@ -12,6 +12,7 @@ userRouter.get('/', userController.getUsers)
 userRouter.post('/', userController.createUser)
 */
 
-userRouter.get('/:id', (req, res) => {
-  res.send(`User id is: ${req.params.id}`)
-})
+userRouter.route('/:id')
+  .put(userController.updateUser)
+  // .get()
+  // .delete()

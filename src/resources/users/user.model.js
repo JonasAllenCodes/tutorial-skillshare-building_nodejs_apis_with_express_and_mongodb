@@ -15,7 +15,7 @@ const schema = {
     trim: true,
     minlength: 6,
   },
-  username: { type: String, trim: true},
+  username: { type: String, trim: true },
   photoURL: String,
   bio: String,
   url: String,

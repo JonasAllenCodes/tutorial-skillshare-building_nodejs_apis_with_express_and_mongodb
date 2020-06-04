@@ -21,7 +21,7 @@ const userController = {
     } catch (error) {
       res.status(400).send(error)
     }
-  }
+  },
 }
 
 /** export controller */

@@ -9,6 +9,6 @@ router.post('/signup', (req, res) => {
   let email = req.body.email
   let password = req.body.password
 
-  const user = {email, password}
+  const user = { email, password }
   res.send(user)
 })

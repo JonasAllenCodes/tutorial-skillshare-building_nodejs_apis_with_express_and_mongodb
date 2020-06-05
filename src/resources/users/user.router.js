@@ -12,7 +12,8 @@ userRouter.get('/', userController.getUsers)
 userRouter.post('/', userController.createUser)
 */
 
-userRouter.route('/:id')
+userRouter
+  .route('/:id')
+  .get(userController.getProfile)
   .put(userController.updateUser)
-  // .get()
   .delete(userController.deleteUser)

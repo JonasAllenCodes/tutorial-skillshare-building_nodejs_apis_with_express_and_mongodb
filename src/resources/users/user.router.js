@@ -13,10 +13,13 @@ userRouter.post('/', userController.createUser)
 userRouter
   .route('/:id')
   .get(userController.getProfile)
-  .put([
+  .put(
+    [
       sanitizeBody('email').trim().escape(),
       sanitizeBody('username').trim().escape(),
       sanitizeBody('bio').trim().escape(),
       sanitizeBody('url').trim().escape(),
-    ], userController.updateUser)
+    ],
+    userController.updateUser
+  )
   .delete(userController.deleteUser)
